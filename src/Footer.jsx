@@ -1,7 +1,7 @@
 const Footer = (props) => {
     
     return (
-        <div class='footer'>
+        <div className='footer'>
             <p>{props.copyRight}</p>
         </div>
     );
