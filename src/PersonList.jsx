@@ -1,7 +1,7 @@
 import {employees} from "./PersonData";
 import PersonCard from "./PersonCard";
 
-const PersonList = () => {
+const PersonList = ({ employeesData }) => {
     return (
         <div className="person_list">
         <h1>Employee list</h1>
@@ -13,6 +13,5 @@ const PersonList = () => {
         </div>
     )
 }
-
 
 export default PersonList;
