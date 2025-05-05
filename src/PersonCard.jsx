@@ -20,7 +20,9 @@ const PersonCard = (props) => {
     
 
     return (
-    <div className='person_container'>
+        
+    <button className='person_container' id="modalWindow">
+        <button>❌</button>
         <p>ID: {props.id}</p>
         <p>Name: {props.firstNameLastName}</p>
         <p>Tile: {props.title}</p>
@@ -33,8 +35,12 @@ const PersonCard = (props) => {
         <p>Department: {props.department}</p>
         <p>Skills: {props.skills}</p>
         {reminder && <p className="reminder">{reminder}</p> }
-    </div>
+    </button>
+    
     );
+    // const displayBtn 
+    // const displayPersonCard = () => {PersonCard.style.display = 'block'}
+    // const closePersonCard = () => (PersonCard.display = 'none')
 };
 
 export default PersonCard;
