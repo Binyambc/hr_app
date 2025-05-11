@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header"
-import Footer from "./Footer"
+import axios from "axios";
 
 const AddEmployeeForm = ({ onAddEmployee }) => {
     const [formData, setFormData] = useState({
@@ -31,6 +30,12 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
             salary: parseFloat(formData.salary),
             skills: formData.skills
         };
+        
+        const newEmployee =  { ...formData, salary: parseFloat(formData.salary) };
+        axios.post("http://localhost:3005/employees", newEmployee).then((res) => {
+            console.log(res);
+          });    
+
         onAddEmployee(employeeData);
         navigate("/");
     }
