@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://hr-app-backend-tau0.onrender.com")
+      .get("https://hr-app-backend-tau0.onrender.com/employees")
       .then((res) => setEmployeesData(res.data))
       .catch((err) => console.error("Failed to fetch employees", err));
   }, []);
@@ -26,7 +26,7 @@ const App = () => {
 
   const handleUpdate = (id, updatedFields) => {
     axios
-      .patch(`https://hr-app-backend-tau0.onrender.com/${id}`, updatedFields )
+      .patch(`https://hr-app-backend-tau0.onrender.com/employees/${id}`, updatedFields )
       .then((res) => {
         setEmployeesData((prev) =>
         prev.map((employee) => (employee.id === id ? res.data : employee))
