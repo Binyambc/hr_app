@@ -7,13 +7,14 @@ import About from "./components/pages/About/About.jsx";
 import './App.css';
 import axios from "axios";
 import Root from "./components/pages/Root.jsx";
+import EmployeeDetail from "./components/pages/Employees/EmployeeDetail.jsx";
 
 const App = () => {
   const [employeesData, setEmployeesData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3005/employees")
+      .get("https://hr-app-backend-tau0.onrender.com")
       .then((res) => setEmployeesData(res.data))
       .catch((err) => console.error("Failed to fetch employees", err));
   }, []);
@@ -25,7 +26,7 @@ const App = () => {
 
   const handleUpdate = (id, updatedFields) => {
     axios
-      .patch(`http://localhost:3005/employees/${id}`, updatedFields )
+      .patch(`https://hr-app-backend-tau0.onrender.com/${id}`, updatedFields )
       .then((res) => {
         setEmployeesData((prev) =>
         prev.map((employee) => (employee.id === id ? res.data : employee))
@@ -52,6 +53,7 @@ const App = () => {
               }
             />  
           <Route path="/employees/:id" element={<PersonCard/>}/>
+          <Route path="/employees/:id" element={<EmployeeDetail/>}/>
           <Route
             path="/addEmployeeForm"
             element={<AddEmployeeForm onAddEmployee={addEmployeeHandler}/>}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import LoaderSpinner from "../../components/LoaderSpinner/LoaderSpinner";
+import LoaderSpinner from "../../LoaderSpinner/LoaderSpinner";
 import axios from "axios";
 
 const EmployeeDetail = () => {

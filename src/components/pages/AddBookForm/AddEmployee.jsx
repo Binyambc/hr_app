@@ -35,7 +35,7 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
         const newEmployee =  { ...formData, salary: parseFloat(formData.salary) };
 
         axios
-        .post("http://localhost:3005/employees", newEmployee)
+        .post("https://hr-app-backend-tau0.onrender.com", newEmployee)
         .then((res) => {
             onAddEmployee(res.data);
             navigate("/employees");
