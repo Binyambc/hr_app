@@ -1,6 +1,7 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import "./addEmployeeForm.css";
 
 const AddEmployeeForm = ({ onAddEmployee }) => {
     const [formData, setFormData] = useState({
@@ -32,12 +33,29 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
         };
         
         const newEmployee =  { ...formData, salary: parseFloat(formData.salary) };
-        axios.post("http://localhost:3005/employees", newEmployee).then((res) => {
-            console.log(res);
-          });    
 
-        onAddEmployee(employeeData);
-        navigate("/");
+        axios
+        .post("http://localhost:3005/employees", newEmployee)
+        .then((res) => {
+            onAddEmployee(res.data);
+            navigate("/employees");
+            setFormData({
+                name: "",
+                title: "",
+                salary: "",
+                phone: "",
+                email: "",
+                animal: "",
+                startDate: "",
+                location: "",
+                department: "",
+                skills: "",
+            })
+          })
+          .catch((err) => {
+            console.error("Failed to add Employee:", err);
+          })    
+
     }
 
     return (

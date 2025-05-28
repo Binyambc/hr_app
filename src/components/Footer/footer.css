@@ -1,0 +1,8 @@
+.footer {
+    text-align: center;
+    margin-top: 100px;
+    border-top: rgb(225, 89, 0) solid 0.5px;
+    border-image: linear-gradient(99deg, rgb(255, 255, 255), rgb(225,89,0), rgb(255, 255, 255)) 1;
+    height: 60px;
+    bottom: 0;
+  }

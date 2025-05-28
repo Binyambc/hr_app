@@ -4,24 +4,25 @@
       "id": "1",
       "name": "Alice Johnson",
       "title": "Software Engineer",
-      "salary": 95000,
+      "salary": 115000,
       "phone": "555-1234",
       "email": "alice.johnson@example.com",
       "animal": "🐶",
       "startDate": "2020-04-01",
       "location": "New York",
-      "department": "Engineering",
+      "department": "Management",
       "skills": [
         "JavaScript",
         "React",
-        "Node.js"
+        "Node.js",
+        "Next Js"
       ]
     },
     {
       "id": "2",
       "name": "Bob Smith",
       "title": "Product Manager",
-      "salary": 110000,
+      "salary": 122333,
       "phone": "555-2345",
       "email": "bob.smith@example.com",
       "animal": "🐱",
@@ -38,7 +39,16 @@
       "id": "3",
       "name": "Carol Lee",
       "title": "UX Designer",
-      "salary": 85000,
+      "salary": {
+        "salary": 90000,
+        "location": "Seattle",
+        "department": "Desig",
+        "skills": [
+          "Figma",
+          "Sketch",
+          "User Research"
+        ]
+      },
       "phone": "555-3456",
       "email": "carol.lee@example.com",
       "animal": "🦜",
@@ -55,7 +65,17 @@
       "id": "4",
       "name": "David Kim",
       "title": "DevOps Engineer",
-      "salary": 100000,
+      "salary": {
+        "salary": 100000,
+        "location": "Austin",
+        "department": "Engineering",
+        "skills": [
+          "AWS",
+          "Docker",
+          "CI/CD",
+          "HERD"
+        ]
+      },
       "phone": "555-4567",
       "email": "david.kim@example.com",
       "animal": "🐇",
@@ -82,7 +102,8 @@
       "skills": [
         "Recruiting",
         "Onboarding",
-        "Conflict Resolution"
+        "Conflict Resolution",
+        "Leadership"
       ]
     },
     {
@@ -128,8 +149,8 @@
       "email": "henry.davis@example.com",
       "animal": "🦅",
       "startDate": "2022-10-12",
-      "location": "Miami",
-      "department": "Support",
+      "location": "Addis Abeba",
+      "department": "Intern",
       "skills": [
         "Zendesk",
         "Communication",
@@ -194,7 +215,9 @@
       "startDate": "2014-06-06",
       "location": "Helsinki",
       "department": "IT",
-      "skills": "coding, design"
+      "skills": [
+        "Design Lead"
+      ]
     },
     {
       "id": "1064",
@@ -208,6 +231,19 @@
       "location": "example",
       "department": "example",
       "skills": "example, example,example"
+    },
+    {
+      "id": "6a14",
+      "name": "Test",
+      "title": "test",
+      "salary": 888888,
+      "phone": "888888",
+      "email": "test@test.com",
+      "animal": "test",
+      "startDate": "2025-05-30",
+      "location": "test",
+      "department": "test",
+      "skills": "test"
     }
   ]
 }

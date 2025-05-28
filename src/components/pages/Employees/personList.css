@@ -1,0 +1,33 @@
+.person_list {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.person_list h1 {
+    display: flex;
+    justify-content: center;
+}
+.person_list input {
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+}
+.person_list label {
+    padding: 1rem;
+}
+.person_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.person_grid p {
+    display: flex;
+    justify-content: center;
+}
