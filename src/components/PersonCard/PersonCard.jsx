@@ -17,7 +17,6 @@ const PersonCard = ({
     onUpdate,
 }) => {
     
-    // const [isDeleting, setIsDeleting] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [editData, setEditData] = useState({salary, location, department, 
         skills: Array.isArray(skills) ? skills.join(", ") : skills,});

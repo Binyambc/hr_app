@@ -22,7 +22,7 @@
       "id": "2",
       "name": "Bob Smith",
       "title": "Product Manager",
-      "salary": 122333,
+      "salary": 98000,
       "phone": "555-2345",
       "email": "bob.smith@example.com",
       "animal": "🐱",
@@ -39,16 +39,7 @@
       "id": "3",
       "name": "Carol Lee",
       "title": "UX Designer",
-      "salary": {
-        "salary": 90000,
-        "location": "Seattle",
-        "department": "Desig",
-        "skills": [
-          "Figma",
-          "Sketch",
-          "User Research"
-        ]
-      },
+      "salary": 99000,
       "phone": "555-3456",
       "email": "carol.lee@example.com",
       "animal": "🦜",
