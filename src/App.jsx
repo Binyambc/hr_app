@@ -53,7 +53,6 @@ const App = () => {
               }
             />  
           <Route path="/employees/:id" element={<PersonCard/>}/>
-          <Route path="/employees/:id" element={<EmployeeDetail/>}/>
           <Route
             path="/addEmployeeForm"
             element={<AddEmployeeForm onAddEmployee={addEmployeeHandler}/>}
