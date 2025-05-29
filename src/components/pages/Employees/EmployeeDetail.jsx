@@ -11,7 +11,7 @@ const EmployeeDetail = () => {
 
     useEffect(() => {
         axios 
-            .get(`https://hr-app-backend-tau0.onrender.com/employees/${id}`)
+            .get(`https://hr-app-backend-8.onrender.com/employees/${id}`)
             .then((res) => {
                 setEmployee(res.data);
                 setLoading(false);
