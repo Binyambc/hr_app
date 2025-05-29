@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './personCard.css';
-import { Link } from "react-router-dom";
 
 const PersonCard = ({
     id,
