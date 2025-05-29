@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './personCard.css';
+import "./personCard.css";
 
 const PersonCard = ({
     id,
