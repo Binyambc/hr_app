@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import LoaderSpinner from "../../LoaderSpinner/LoaderSpinner";
 import axios from "axios";
 
 const EmployeeDetail = () => {
@@ -22,18 +21,7 @@ const EmployeeDetail = () => {
             });
     }, [id]);
 
-    if (loading) {
-        return <LoaderSpinner />;
-    }
-
-    if (!employee) {
-        return (
-            <div>
-                <p>Employee not found.</p>
-                <button onClick={() => navigate(-1)}>Go Back</button>
-            </div>
-        );
-    }
+    
 
     return (
         <div className="employee-detail">

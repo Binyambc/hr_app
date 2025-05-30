@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./personCard.css";
+import LoaderSpinner from "../../LoaderSpinner/LoaderSpinner";
 
 const PersonCard = ({
     id,
@@ -70,6 +71,19 @@ const PersonCard = ({
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
     };
+
+    if (loading) {
+        return <LoaderSpinner />;
+    }
+
+    if (!employee) {
+        return (
+            <div>
+                <p>Employee not found.</p>
+                <button onClick={() => navigate(-1)}>Go Back</button>
+            </div>
+        );
+    }
 
     return (
         <>
