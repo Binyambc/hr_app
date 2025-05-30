@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./personCard.css";
-import LoaderSpinner from "../../LoaderSpinner/LoaderSpinner";
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const PersonCard = ({
     id,
