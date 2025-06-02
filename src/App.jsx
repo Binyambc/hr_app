@@ -7,7 +7,6 @@ import About from "./components/pages/About/About.jsx";
 import './App.css';
 import axios from "axios";
 import Root from "./components/pages/Root.jsx";
-import EmployeeDetail from "./components/pages/Employees/EmployeeDetail.jsx";
 
 const App = () => {
   const [employeesData, setEmployeesData] = useState([]);
