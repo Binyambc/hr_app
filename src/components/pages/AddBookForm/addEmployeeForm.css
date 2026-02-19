@@ -19,6 +19,12 @@
     flex-direction: column;
     gap: 8px;
   }
+
+  .form-group label {
+    font-weight: 500;
+    color: #213547;
+    font-size: 14px;
+  }
   
   .form-group input {
     padding: 12px;
@@ -36,6 +42,48 @@
   .form-group input::placeholder {
     color: #999;
   }
+
+  /* Styles for react-international-phone PhoneInput component */
+  .form-group .react-international-phone-input-container {
+    width: 100%;
+  }
+
+  .form-group .react-international-phone-input-container .react-international-phone-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+  }
+
+  .form-group .react-international-phone-input-container .react-international-phone-input:focus {
+    outline: none;
+    border-color: rgb(225, 89, 0);
+  }
+
+  .form-group .react-international-phone-country-selector {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group .react-international-phone-country-selector:focus,
+  .form-group .react-international-phone-country-selector:focus-within {
+    border-color: rgb(225, 89, 0);
+    outline: none;
+  }
+
+  .form-group .react-international-phone-country-selector-button {
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group .react-international-phone-country-selector-button:hover {
+    border-color: rgb(225, 89, 0);
+  }
   
   .submit-btn {
     background-color: rgb(225, 89, 0);
@@ -52,5 +100,15 @@
   
   .submit-btn:hover {
     background-color: rgb(200, 79, 0);
+  }
+
+  .submit-btn:focus {
+    outline: 2px solid rgb(225, 89, 0);
+    outline-offset: 2px;
+  }
+
+  .submit-btn:focus-visible {
+    outline: 2px solid rgb(225, 89, 0);
+    outline-offset: 2px;
   }
   

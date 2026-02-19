@@ -1,0 +1,146 @@
+.country-code-select-wrapper {
+    position: relative;
+    min-width: 150px;
+}
+
+.country-code-select-button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+.country-code-select-button:hover {
+    border-color: rgb(225, 89, 0);
+}
+
+.country-code-select-button:focus {
+    outline: none;
+    border-color: rgb(225, 89, 0);
+}
+
+.country-code-flag {
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.country-code-flag svg {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+}
+
+.country-code-text {
+    flex: 1;
+    font-weight: 500;
+}
+
+.country-code-arrow {
+    font-size: 12px;
+    color: #666;
+}
+
+.country-code-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.country-code-search {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.country-code-search:focus {
+    border-color: rgb(225, 89, 0);
+}
+
+.country-code-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.country-code-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.country-code-option:last-child {
+    border-bottom: none;
+}
+
+.country-code-option:hover,
+.country-code-option.focused {
+    background-color: rgba(225, 89, 0, 0.1);
+}
+
+.country-code-option.selected {
+    background-color: rgba(225, 89, 0, 0.15);
+    font-weight: 500;
+}
+
+.country-code-option-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.country-code-number {
+    font-weight: 500;
+    font-size: 14px;
+    color: #213547;
+}
+
+.country-code-name {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.country-code-no-results {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.country-code-select-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}

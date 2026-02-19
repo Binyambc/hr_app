@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import "./addEmployeeForm.css";
 
 const AddEmployeeForm = ({ onAddEmployee }) => {
@@ -22,6 +24,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({...prev, [name]: value}));
+    }
+
+    const handlePhoneChange = (phone) => {
+        setFormData((prev) => ({...prev, phone}));
     }
 
     const handleSubmit = (e) => {
@@ -63,8 +69,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
             <h1>Add New Employee</h1>
             <form onSubmit={handleSubmit} className="employee-form">
                 <div className="form-group">
+                    <label htmlFor="name">Full Name</label>
                     <input 
                         type="text"
+                        id="name"
                         placeholder="Full Name"
                         value={formData.name}
                         onChange={handleChange}
@@ -73,8 +81,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="title">Title</label>
                     <input 
                         type="text"
+                        id="title"
                         placeholder="Title"
                         value={formData.title}
                         onChange={handleChange}
@@ -83,8 +93,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="salary">Salary</label>
                     <input 
                         type="number"
+                        id="salary"
                         placeholder="Salary"
                         value={formData.salary}
                         onChange={handleChange}
@@ -93,18 +105,20 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
-                    <input 
-                        type="tel"
-                        placeholder="Phone number"
+                    <label htmlFor="phone">Phone Number</label>
+                    <PhoneInput
+                        defaultCountry="us"
                         value={formData.phone}
-                        onChange={handleChange}
-                        name="phone"
+                        onChange={handlePhoneChange}
+                        id="phone"
                         required
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="email">E-mail</label>
                     <input 
                         type="email"
+                        id="email"
                         placeholder="E-mail"
                         value={formData.email}
                         onChange={handleChange}
@@ -113,8 +127,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="animal">Favorite Animal</label>
                     <input 
                         type="text"
+                        id="animal"
                         placeholder="Favorite animal"
                         value={formData.animal}
                         onChange={handleChange}
@@ -123,9 +139,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="startDate">Start Date</label>
                     <input 
                         type="date"
-                        placeholder="Start Date"
+                        id="startDate"
                         value={formData.startDate}
                         onChange={handleChange}
                         name="startDate"
@@ -133,8 +150,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="location">Location</label>
                     <input 
                         type="text"
+                        id="location"
                         placeholder="Location"
                         value={formData.location}
                         onChange={handleChange}
@@ -143,8 +162,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="department">Department</label>
                     <input 
                         type="text"
+                        id="department"
                         placeholder="Department"
                         value={formData.department}
                         onChange={handleChange}
@@ -153,8 +174,10 @@ const AddEmployeeForm = ({ onAddEmployee }) => {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="skills">Skills (comma-separated)</label>
                     <input 
                         type="text"
+                        id="skills"
                         placeholder="Skills (comma-separated)"
                         value={formData.skills}
                         onChange={handleChange}
