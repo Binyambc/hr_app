@@ -26,17 +26,14 @@ const PersonList = ({employeesData, onUpdate}) => {
             <div className="person_list">
                 <h1>Employee list</h1>
                 <div className="employees">
-                    <div>
-                        <label htmlFor="search">Search</label>
-                            <input 
-                                type="text" 
-                                id="search" 
-                                name="search"
-                                placeholder="search by name or department" 
-                                value={searchValue} 
-                                onChange={searchHandle} 
-                            />    
-                    </div>   
+                    <input 
+                        type="text" 
+                        id="search" 
+                        name="search"
+                        placeholder="search by name or department" 
+                        value={searchValue} 
+                        onChange={searchHandle} 
+                    />    
                 </div>
 
                 <div className="person_grid">

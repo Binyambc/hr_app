@@ -72,39 +72,31 @@ const PersonCard = ({
         setIsModalOpen(!isModalOpen);
     };
 
-    if (loading) {
-        return <LoaderSpinner />;
-    }
-
-    if (!employee) {
-        return (
-            <div>
-                <p>Employee not found.</p>
-                <button onClick={() => navigate(-1)}>Go Back</button>
-            </div>
-        );
-    }
-
     return (
         <>
         <div className='person_card'>
             <button className='person_container' onClick={toggleModal}>
-                <p>Name: {name}</p>
-                <p>Title: {title}</p>
-                <p>Location: {location}</p>
-                <p>Department: {department}</p>
-                {reminder && <p className="reminder">{reminder}</p>}
+                <div className='card_header'>
+                    <h3>{name}</h3>
+                </div>
+                <div className='card_body'>
+                    <p>Title: {title}</p>
+                    <p>Location: {location}</p>
+                    <p>Department: {department}</p>
+                    {reminder && <p className="reminder">{reminder}</p>}
+                </div>
             </button>
             </div>
             
             {isModalOpen && (
                 <div className="modal-overlay" onClick={toggleModal}>
                     <div className="modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="close-button" onClick={toggleModal}>×</button>
-                        <h2>Employee Details</h2>
+                        <div className="modal-header">
+                            <button className="close-button" onClick={toggleModal}>×</button>
+                            <h3>{name}</h3>
+                        </div>
                         <div className="modal-details">
                             <p><strong>ID:</strong> {id}</p>
-                            <p><strong>Name:</strong> {name}</p>
                             <p><strong>Title:</strong> {title}</p>
 
                             <p><strong>Phone:</strong> {phone}</p>
